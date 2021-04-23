@@ -12,7 +12,7 @@ public class Main {
         //  Using ApplicationContext
         ApplicationContext applicationContext=new AnnotationConfigApplicationContext(Appconfig.class);
         Actor act=applicationContext.getBean(Actor.class);
-            act.setName("Tharun");
+            act.setName("Lohith");
             act.setGender("Male");
             act.setAge(25);
             System.out.println(act);

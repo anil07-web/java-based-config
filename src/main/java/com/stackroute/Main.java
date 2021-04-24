@@ -12,11 +12,17 @@ public class Main {
         //  Using ApplicationContext
         ApplicationContext applicationContext=new AnnotationConfigApplicationContext(Appconfig.class);
         Actor act=applicationContext.getBean(Actor.class);
-            act.setName("Lohith");
+            act.setName("Anil");
             act.setGender("Male");
             act.setAge(25);
             System.out.println(act);
         Movie mov = applicationContext.getBean("movie",Movie.class);
         System.out.println(mov);
+        Movie mov1 = applicationContext.getBean("movie",Movie.class);
+        System.out.println(mov==mov1);   // Scope(Singletone)->true
+                                         // Scope(prototype)->false
+
+
+
     }
 }
